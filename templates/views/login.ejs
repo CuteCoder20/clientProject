@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="signup">
+        <h2>Login now</h2>
+        <div class="signup">
+        <form action="/usamalogin" method="post">
+          <% if(messages.error) { %>
+            <span><%= messages.error %></span>
+          <%}%> 
+
+          <div class="email">
+            
+            <input type="email" placeholder="Enter your email" name="email" value="<%=messages.email%>"/>
+          </div>
+          <div class="password">
+            
+            <input type="password" placeholder="Enter your password" name="password"/>
+          </div>
+          <button type="submit" class="btn">Login</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<!-- create by dilawar khan 10/6/2021 -->

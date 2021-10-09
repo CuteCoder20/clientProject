@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+    <!-- navbar css -->
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- navbar css end -->
+  </head>
+  <body>
+    <!-- ********************************** header icon start ********************************  -->
+    <div class="site-content">
+      <header class="topbar">
+        <div class="container containers">
+          <div class="icons">
+            <a href="#"><img src="./icons/facebook.svg" alt="" /></a>
+            <a href="#"><img src="./icons/instagram.svg" alt="" /></a>
+            <a href="#"><img src="./icons/twitter.svg" alt="" /></a>
+          </div>
+          <div class="auth">
+            <div>
+              <img src="./icons/phone.svg" alt="" />
+              <a href="#">03366995013</a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- ********************************** header icon end ********************************  -->
+
+    <!-- ********************************** navbar start ********************************  -->
+    <div id="header">
+      <nav>
+        <div class="containers nav-wrapper">
+          <div class="brand">
+            <a href="/"
+              ><span><strong>USAMA</strong> AWAN</span></a
+            >
+          </div>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-list">
+            <li><a href="/usamahome">Home</a></li>
+            <li><a href="/usamacontact">Contact</a></li>
+            <li>
+              <select id="themeSwitcher">
+                <option value="">Select a theme</option>
+                <option value="theme-light">Mix</option>
+                <option value="theme-dark">Dark</option>
+                <option value="theme-ocean">Ocean</option>
+              </select>
+            </li>
+            <li>
+              <a href="/logout" class="btn">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- ********************************** navbar end ********************************  -->
+
+    <div class="full">
+      <h3>Contact Us</h3>
+      <% if(messages.error) {%>
+      <marquee behavior="alternat" direction="right" scrollamount="10%">
+        <p><%=messages.error %></p>
+      </marquee>
+      <%}%>
+      <div class="center">
+        <form action="/usamacontact" method="post" id="contact">
+          <div class="input">
+            <div>
+              <span>First Name:</span><br />
+              <input
+                type="text"
+                placeholder="Enter Your name"
+                name="fname"
+                value="<%=messages.fname%>"
+              />
+            </div>
+            <div>
+              <span>Last Name:</span><br />
+              <input
+                type="text"
+                placeholder="Enter Last name"
+                name="lname"
+                value="<%=messages.lname%>"
+              />
+            </div>
+            <div>
+              <span>Email Adress:</span><br />
+              <input
+                type="email"
+                placeholder="Enter Last name"
+                name="email"
+                value="<%=messages.email%>"
+              />
+            </div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </div>
+
+          <div class="textare">
+            <div>
+              <span>Message:</span><br />
+
+              <textarea
+                name="message"
+                placeholder="message.."
+                value="<%=messages.message%>"
+              ></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <p>
+        © Copyright Usama Awan. All Rights Reserved Develope by Dilawar khan
+      </p>
+    </footer>
+  </body>
+  <script src="./js/app.js"></script>
+</html>

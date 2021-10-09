@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <div id="signup">
+        <h2>Signup now</h2>
+        <div class="signup">
+        <form action="/usamasignup" method="post">
+          <% if(messages.error) { %>
+            <span><%= messages.error %></span>
+          <%}%> 
+
+          <div class="name">
+            
+            <input type="text" placeholder="Enter your name" name="name" value="<%=messages.name%>" />
+          </div>
+          <div class="email">
+            
+            <input type="email" placeholder="Enter your email" name="email" value="<%=messages.email%>"/>
+          </div>
+          <div class="phone">
+            
+            <input type="tel" placeholder="Enter your phone" name="phone" value="<%=messages.phone%>" />
+          </div>
+          <div class="password">
+            
+            <input type="password" placeholder="Enter your password" name="password"/>
+          </div>
+          <div class="cpassword">
+            
+            <input type="password" placeholder="Confirm your password" name="cpassword"/>
+          </div>
+          <button type="submit" class="btn">signup</button>
+          <a href="/usamalogin" class="btn">Login</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<!-- create by dilawar khan 10/6/2021 -->
